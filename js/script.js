@@ -24,4 +24,11 @@ $(document).ready(function () {
 
   }
 
+  $('.cancella').click(
+    function() {
+      $(this).parent().remove();
+    }
+  );
+
+
 });
