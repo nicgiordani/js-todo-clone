@@ -30,5 +30,17 @@ $(document).ready(function () {
     }
   );
 
+  $("input").keypress(function(event) {
+    if(event.which == 13) || event.keycode == 13) {
+      var newText = $("[name ='add-field']").val();
+
+      var context = {
+        text: newText
+      };
+      var html = template(context);
+      $("#todo").append(html);
+
+    }
+  });
 
 });
